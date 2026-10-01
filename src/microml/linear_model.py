@@ -6,6 +6,7 @@ class LinearRegression:
         self.intercept_ = None
         self.coef_ = None
 
+
     def fit(self, x, y):
         x = np.array(x, dtype=float)
         y = np.array(y, dtype=float).ravel()
@@ -17,7 +18,7 @@ class LinearRegression:
         self.coef_ = weights[1:]
         return self
 
+
     def predict(self, x):
         X = np.asarray(x, dtype=float)
         return X @ self.coef_ + self.intercept_
-    
